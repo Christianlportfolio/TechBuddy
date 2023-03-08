@@ -1,0 +1,19 @@
+.guide-options-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .guide-option-button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: #e1f8ec;
+    border: 2px solid #01553d;
+    margin: 3px;
+  }
+
+  .guide-option-button:hover {
+    background: #01553d;
+    color: #fff;
+  }
+  
