@@ -3,7 +3,7 @@ import Answer from './components/answers/answer.jsx'
 import Guide from './components/guides/guide.jsx'
 import GuideLink from './components/guideslink/guidelink.jsx';
 import GuideLinkAnswer from './components/guideslinkanswers/guidelinkanswer.jsx';
-import WrongAnswerForm from './components/handlewronganswer/wronganswerform.jsx';
+import NoAnswerForm from './components/handlenoanswer/noanswerform.jsx';
 
 
 
@@ -55,12 +55,9 @@ Jeg er din virtuelle guide og jeg kan svare på dit spørgsmål.`
             },
         },
         {
-            widgetName: "wronganswerform",
-            widgetFunc: (props) => <WrongAnswerForm {...props} />,
+            widgetName: "noanswerform",
+            widgetFunc: (props) => <NoAnswerForm {...props} />,
         },
-
-
-
     ],
 };
 

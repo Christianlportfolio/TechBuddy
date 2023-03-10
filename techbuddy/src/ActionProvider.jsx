@@ -8,6 +8,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         setState((prev) => ({
             ...prev,
             messages: [...prev.messages, botMessage],
+            actionProviderHandleNoAnswerForm: handleNoAnswerForm
           }));
     };
 
@@ -21,6 +22,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         setState((prev) => ({
             ...prev,
             messages: [...prev.messages, botMessage],
+            actionProviderHandleNoAnswerForm: handleNoAnswerForm
         }));
     };
 
@@ -35,6 +37,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             ...prev,
             messages: [...prev.messages, botMessage],
             actionProviderTest: handleElectricityList,
+            actionProviderHandleNoAnswerForm: handleNoAnswerForm
         }));
     };
 
@@ -49,6 +52,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             ...prev,
             messages: [...prev.messages, botMessage],
             actionProviderHandleEletricityAnswer: handleEletricityAnswer,
+            actionProviderHandleNoAnswerForm: handleNoAnswerForm
         }));
     };
 
@@ -62,14 +66,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         setState((prev) => ({
             ...prev,
             messages: [...prev.messages, botMessage],
+            actionProviderHandleNoAnswerForm: handleNoAnswerForm
         }));
     };
 
-    const handleWrongAnswerForm = () => {
+    const handleNoAnswerForm = () => {
         const botMessage = createChatBotMessage(
-            "Hej! velkommen til vores kundeservice. Du ønsker hjælp uden for vores åbningstider og bedes kontakte os i vores åbningstider 8-16 mandag til torsdag eller 8-15.30 fredag. Du kan udfylde nedenstående formular, så vender vi tilbage hurtigst muligt",
+            "Kundeservice",
             {
-              widget: 'wronganswerform',
+              widget: 'noanswerform',
             }
         );                   
         setState((prev) => ({
@@ -89,7 +94,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                         handleGuideList,
                         handleElectricityList,
                         handleEletricityAnswer,
-                        handleWrongAnswerForm,
+                        handleNoAnswerForm,
                     },
                 });
             })}

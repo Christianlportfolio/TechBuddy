@@ -3,8 +3,6 @@ import "./guide.css";
 
 const Guide = (props) => {
 
-
-
     const options = [
       { text: "El", 
       handler: props.state.actionProviderTest, 
@@ -29,5 +27,4 @@ const Guide = (props) => {
     return <div className="guide-options-container">{optionsMarkup}</div>;
   };
   
-
   export default Guide;

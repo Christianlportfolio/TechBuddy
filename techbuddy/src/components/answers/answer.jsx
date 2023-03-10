@@ -2,9 +2,7 @@ import React, {useEffect, useState} from "react";
 import './answer.css'
 
 
-const handleWrongAnswer = () => {
 
-}
 
 const Answer = (props) => {
 
@@ -46,7 +44,7 @@ const Answer = (props) => {
             if (item.classID  === 2) {
               return <div className="answer-div" key={index}><p>{item.botAnswer}</p><a href={item.botPrompt.displayText}>Læs mere her</a></div>
             }
-            return <div className="answer-div" key={index}><p>{item.botAnswer}</p><p>{item.botAnswerSecond}</p><button className="answer-button" onClick={handleWrongAnswer}>Hjælp</button></div>;
+            return <div className="answer-div" key={index}><p>{item.botAnswer}</p><p>{item.botAnswerSecond}</p><button className="answer-button" onClick={props.state.actionProviderHandleNoAnswerForm}>Hjælp</button></div>;
           })}
         </div>
       );
