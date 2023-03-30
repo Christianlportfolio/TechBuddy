@@ -1,8 +1,10 @@
 import { React, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './noanswerform.css'
 
 const NoAnswerForm = () => {
 
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({});
     const [subject, setSubject] = useState("Spørgsmål til regning");
     const [fetchData, setFetchData] = useState();
@@ -44,7 +46,7 @@ const NoAnswerForm = () => {
                 }
             )
         };
-        fetch("https://localhost:7223/api/techbuddy/createcustomerquestion", requestOptions)
+        fetch("https://localhost:5001/api/techbuddy/createcustomerquestionform", requestOptions)
         
         .then(async response => {
             const isJson = response.headers.get('content-type')?.includes('application/json');
@@ -57,6 +59,8 @@ const NoAnswerForm = () => {
 
             setFetchData(data)
             alert("Dit spørgsmål er sendt afsted :)")
+            navigate('/');
+
         })
         .catch(error => {
             setFetchData({ errorMessage: error.toString() });

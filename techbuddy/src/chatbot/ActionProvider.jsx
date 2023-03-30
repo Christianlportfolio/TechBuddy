@@ -36,7 +36,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         setState((prev) => ({
             ...prev,
             messages: [...prev.messages, botMessage],
-            actionProviderTest: handleElectricityList,
+            actionProviderhandleElectricityList: handleElectricityList,
             actionProviderHandleNoAnswerForm: handleNoAnswerForm
         }));
     };

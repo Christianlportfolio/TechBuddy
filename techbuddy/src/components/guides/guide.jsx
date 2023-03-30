@@ -5,7 +5,7 @@ const Guide = (props) => {
 
     const options = [
       { text: "El", 
-      handler: props.state.actionProviderTest, 
+      handler: props.state.actionProviderhandleElectricityList, 
       id: 1 },
       { text: "Naturgas", handler: () => {}, id: 2 },
       { text: "Fibernet", handler: () => {}, id: 3 },

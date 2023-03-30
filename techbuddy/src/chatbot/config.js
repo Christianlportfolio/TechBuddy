@@ -1,9 +1,9 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import Answer from './components/answers/answer.jsx'
-import Guide from './components/guides/guide.jsx'
-import GuideLink from './components/guideslink/guidelink.jsx';
-import GuideLinkAnswer from './components/guideslinkanswers/guidelinkanswer.jsx';
-import NoAnswerForm from './components/handlenoanswer/noanswerform.jsx';
+import Answer from '../components/answers/answer.jsx'
+import Guide from '../components/guides/guide.jsx'
+import GuideLink from '../components/guideslink/guidelink.jsx';
+import GuideLinkAnswer from '../components/guideslinkanswers/guidelinkanswer.jsx';
+import NoAnswerForm from '../components/handlenoanswer/noanswerform.jsx';
 
 
 

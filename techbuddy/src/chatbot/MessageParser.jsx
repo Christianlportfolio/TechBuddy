@@ -4,22 +4,17 @@ const MessageParser = ({ children, actions }) => {
     
    
     const parse = (message) => {
-        if (message.includes('hej')) {
+        if (message ==='hej' || message ==="Hej" || message ==="hejsa" ) {
             actions.handleHello();
         }
 
-        if (message.includes("guide")){
+        if (message === "guide" || message === "Guide"){
             actions.handleGuideList();
         }
 
-        if (message.includes(message !== "hej" && message!=="guide" && message)){
+        if (message.includes(message !== "hej" && message !== "Hej" && message !== "hejsa" && message !== "Guide" && message !=="guide" && message)){
             actions.handleAnswer();
         }
-
-     
-        
-        
-    
     };
 
     return (

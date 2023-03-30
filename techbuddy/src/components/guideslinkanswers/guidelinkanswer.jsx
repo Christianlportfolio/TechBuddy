@@ -8,7 +8,7 @@ const GuideLinkAnswer = (props) => {
     const [answer, setAnswer] = useState([]);
     useEffect(() => {
         
-        fetch('https://localhost:7223/api/techbuddy/Hvad er prisen på el?')
+        fetch('https://localhost:5001/api/techbuddy/Hvad er prisen på el?')
         .then((res) => res.json())
         .then((data) => setAnswer(data));
     }, []);

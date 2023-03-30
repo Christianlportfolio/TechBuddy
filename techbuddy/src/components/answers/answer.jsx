@@ -14,7 +14,7 @@ const Answer = (props) => {
         const lastItem = user.slice(-1).pop();
         const lastMessage = lastItem.message;
 
-        fetch('https://localhost:7223/api/techbuddy/' + lastMessage)
+        fetch('https://localhost:5001/api/techbuddy/' + lastMessage)
         .then((res) => res.json())
         .then((data) => setAnswer(data));
     }, [array]);
