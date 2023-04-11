@@ -1,5 +1,6 @@
 
 import React, {useEffect, useState} from "react";
+import { Table } from 'semantic-ui-react'
 
 const RateLimit = () => {
 
@@ -16,7 +17,18 @@ const RateLimit = () => {
                 if (item == "no_logs") {
                     return <p key={index}>&#9989; Ingen API rate limit log</p>;
                 }
-                return <li key={index}>{item}</li>
+                //return <li key={index}>{item}</li>
+                return (
+                    <div>
+                        <Table singleLine>              
+                            <Table.Body>
+                                <Table.Row>
+                                    <Table.Cell key={index}>{item}</Table.Cell>
+                                </Table.Row>
+                            </Table.Body>
+                        </Table>
+                    </div>
+                )
                 
             })}
         </div>

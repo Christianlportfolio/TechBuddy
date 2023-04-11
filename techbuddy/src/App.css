@@ -19,12 +19,11 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
   background-color: #04AA6D;
+  color: black;
 }
 
-li.active {
-  background-color: #04AA6D;
-}
+
 

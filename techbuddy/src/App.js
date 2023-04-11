@@ -8,6 +8,7 @@ import Grafana from './pages/DashBoard_Grafana';
 import "./App.css"
 import RateLimit from './pages/DashBoard_Rate_Limit';
 import ContactForm from './pages/DashBoard_Contactform';
+import TestEnvironment from './pages/DashBoard_Test_Environment';
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/dashboard/trafik" element={< Grafana />} />
           <Route path="/dashboard/uptime" element={< RateLimit />} />
           <Route path="/dashboard/kontakformular" element={< ContactForm />} />
+          <Route path="/dashboard/testmiljø" element={< TestEnvironment />} />
         </Route>
         <Route path="/om" element={<About />} />
       </Routes>

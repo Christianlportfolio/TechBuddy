@@ -34,7 +34,7 @@ const Answer = (props) => {
     //     </div>
     // );
 
-    //Udfordring med re-rendering...??
+
     return (
         <div>
           {answer.map((item, index) => {
@@ -42,7 +42,7 @@ const Answer = (props) => {
               return <div className="answer-div" key={index}><p>{item.botAnswer}</p></div>;
             }
             if (item.classID  === 2) {
-              return <div className="answer-div" key={index}><p>{item.botAnswer}</p><a href={item.botPrompt.displayText}>Læs mere her</a></div>
+              return <div className="answer-div" key={index}><p>{item.botAnswer}</p><a href={item.botPrompt.displayText} target="_blank">Læs mere her</a></div>
             }
             return <div className="answer-div" key={index}><p>{item.botAnswer}</p><p>{item.botAnswerSecond}</p><button className="answer-button" onClick={props.state.actionProviderHandleNoAnswerForm}>Hjælp</button></div>;
           })}
@@ -50,5 +50,5 @@ const Answer = (props) => {
       );
 };
 
-debugger;
+
 export default Answer;

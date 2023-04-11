@@ -35,7 +35,7 @@ const GuideLinkAnswer = (props) => {
             if (item.classID  === 1) {
               return <div className="answer-div" key={index}><p>{item.botAnswer}</p></div>;
             }
-            return <div className="answer-div"  key={index}><p>{item.botAnswer}</p><a href={item.botPrompt.displayText}>Læs mere her</a></div>
+            return <div className="answer-div"  key={index}><p>{item.botAnswer}</p><a href={item.botPrompt.displayText} target="_blank">Læs mere her</a></div>
           })}
         </div>
       );
