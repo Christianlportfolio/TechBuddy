@@ -1,16 +1,25 @@
 import 'react-chatbot-kit/build/main.css';
-import { Route, Routes, Link } from "react-router-dom"
+import { Route, Routes, Link, Navigate } from "react-router-dom"
+
+//Chatbot
 import ChatBot from './chatbot/ChatBot';
+
+//pages
+import Home from './pages/Home';
 import About from './pages/About';
 import DashBoard from './pages/DashBoard';
-import Home from './pages/Home';
 import Grafana from './pages/DashBoard_Grafana';
-import "./App.css"
 import RateLimit from './pages/DashBoard_Rate_Limit';
 import ContactForm from './pages/DashBoard_Contactform';
 import TestEnvironment from './pages/DashBoard_Test_Environment';
 
 
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
+import { APP_ROUTES } from './utils/constants';
+
+//css
+import "./App.css";
 
 const App = () => {
   return (
@@ -25,7 +34,10 @@ const App = () => {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/dashboard" element={<Navigate to={APP_ROUTES.Dashboard} />} /> 
+        <Route path="/" element={<Home />}/>
+        <Route path={APP_ROUTES.SIGN_UP} exact element={<SignUp />} />
+        <Route path={APP_ROUTES.SIGN_IN} element={<SignIn />} /> 
         <Route path="/techbuddy" element={<ChatBot />} />
         <Route path="/dashboard" element={<DashBoard />}>
           <Route index element={<Grafana />} />
@@ -36,6 +48,7 @@ const App = () => {
         </Route>
         <Route path="/om" element={<About />} />
       </Routes>
+     
     </div>
   )
 };

@@ -1,6 +1,12 @@
 import { Link, Outlet } from "react-router-dom"
+import { useUser } from "../lib/customHooks";
 
 const DashBoard = () => {
+
+  const { user, authenticated } = useUser();
+  if (!user || !authenticated) {
+    return (<h1>hello</h1>)
+  } 
   return (
     <div>
       <nav>
@@ -13,10 +19,10 @@ const DashBoard = () => {
       </nav>
       <Outlet />
   </div>
- 
-
-
   )
+ 
   };
+
+
   
   export default DashBoard;
