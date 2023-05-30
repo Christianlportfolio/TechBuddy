@@ -3,10 +3,8 @@ import { useUser } from "../lib/customHooks";
 
 const DashBoard = () => {
 
-  const { user, authenticated } = useUser();
-  if (!user || !authenticated) {
-    return (<h1>hello</h1>)
-  } 
+  useUser();
+
   return (
     <div>
       <nav>

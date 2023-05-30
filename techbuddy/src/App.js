@@ -1,21 +1,24 @@
 import 'react-chatbot-kit/build/main.css';
-import { Route, Routes, Link, Navigate } from "react-router-dom"
+import { Route, Routes, Link } from "react-router-dom"
 
 //Chatbot
 import ChatBot from './chatbot/ChatBot';
 
 //pages
 import Home from './pages/Home';
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 import About from './pages/About';
 import DashBoard from './pages/DashBoard';
 import Grafana from './pages/DashBoard_Grafana';
 import RateLimit from './pages/DashBoard_Rate_Limit';
 import ContactForm from './pages/DashBoard_Contactform';
 import TestEnvironment from './pages/DashBoard_Test_Environment';
+import NoPage from './pages/NoPage'
 
 
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+
+//Routes
 import { APP_ROUTES } from './utils/constants';
 
 //css
@@ -34,7 +37,6 @@ const App = () => {
       </nav>
 
       <Routes>
-        <Route exact path="/dashboard" element={<Navigate to={APP_ROUTES.Dashboard} />} /> 
         <Route path="/" element={<Home />}/>
         <Route path={APP_ROUTES.SIGN_UP} exact element={<SignUp />} />
         <Route path={APP_ROUTES.SIGN_IN} element={<SignIn />} /> 
@@ -47,6 +49,7 @@ const App = () => {
           <Route path="/dashboard/testmiljø" element={< TestEnvironment />} />
         </Route>
         <Route path="/om" element={<About />} />
+        <Route path="*" element={<NoPage />} />
       </Routes>
      
     </div>

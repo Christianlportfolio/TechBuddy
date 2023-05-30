@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { API_ROUTES, APP_ROUTES } from '../utils/constants';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const navigate = useNavigate()
@@ -60,7 +60,7 @@ const SignUp = () => {
                 onChange={handleChange}
             />
         </label>
-        <input className='form-button' type="submit" />
+        <input className='form-button' type="submit" value="Opret bruger" />
     </form>
     </div>
   );

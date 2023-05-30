@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { API_ROUTES, APP_ROUTES } from '../utils/constants';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useUser } from '../lib/customHooks';
 import { storeTokenInLocalStorage } from '../lib/common';
 
@@ -38,7 +38,7 @@ const SignIn = () => {
             salt: ""
         }
       });
-      if (!response?.data?.token) {
+      if (!response?.data?.token) { 
         console.log('Something went wrong during signing in: ', response);
         return;
       }
@@ -74,7 +74,7 @@ const SignIn = () => {
                 onChange={handleChange}
             />
         </label>
-        <input className='form-button' type="submit" />
+        <input className='form-button' type="submit" value="Login" />
     </form>
     </div>
   );
